@@ -40,6 +40,15 @@ from database import (
     unblock_user,
     update_subscription_screenshot,
 )
+from keyboards import (
+    main_menu_keyboard,
+    reminder_menu_keyboard,
+    habit_menu_keyboard,
+    settings_keyboard,
+    reminder_actions_keyboard,
+    habit_actions_keyboard,
+    subscription_keyboard,
+)
 
 PAYMENT_SCREENSHOT_DIR = "payment_screenshots"
 
