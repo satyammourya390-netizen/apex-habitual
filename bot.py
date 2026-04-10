@@ -485,7 +485,7 @@ async def process_text_input(update: Update, context: ContextTypes.DEFAULT_TYPE)
         if not reminder:
             await update.message.reply_text("Reminder creation failed.", reply_markup=main_menu_keyboard())
             return
-        display_time = reminder.reminder_dt.astimezone(IST) if reminder.reminder_dt.tzinfo else reminder.reminder_dt
+        display_time = reminder.reminder_datetime.astimezone(IST) if reminder.reminder_datetime.tzinfo else reminder.reminder_datetime
         await update.message.reply_text(
             f"Reminder created successfully.\n\nTask: {reminder.description}\nTime: {display_time.strftime('%d/%m/%Y %I:%M %p')}\nType: {reminder.recurrence_type or 'one-time'}",
             reply_markup=main_menu_keyboard(),
